@@ -1,0 +1,63 @@
+h1 {
+  text-align: center;
+}
+
+.compteur {
+  position: relative;
+  text-align: center;
+  font-size: 200%;
+  border-style: double;
+  border-radius: 15px;
+  top :50px;
+}
+
+.boutique {
+  position: relative;
+  border-style: solid;
+  top:80px;
+  width: 40%;
+  height: 500px;
+}
+
+.achat {
+  width: 400px;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: white;
+  border-radius: 50px;
+}
+
+
+
+.clicker {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 9px #999;
+  top:250px;
+  right: 870px;
+  position: absolute;
+  //width: 100%;
+}
+
+.clicker:hover {background-color: grey}
+
+.clicker:active {
+  background-color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

@@ -1,0 +1,35 @@
+<!doctype html> 
+<html lang="fr">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>SLIDES</title>
+</head>
+<body>
+<h1>Avec des images : </h1><br>
+<div class="image_slides">
+    <img class="mySlides" src="http://localhost/public_html2/New-World/boucher.jpg" width="600" height="514">
+	<img class="mySlides" src="http://localhost/public_html2/New-World/jardinier-a-larrosoir.jpg" width="600" height="514">
+	<img class="mySlides" src="/~remy/monde.png" width="600" height="514">
+	<button class="btn_img_left" onclick="plusDivs(-1)">&#10094;</button>
+	<button class="btn_img_right" onclick="plusDivs(+1)">&#10095;</button>
+</div>
+
+<script type="text/javascript">
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+}
+</script>

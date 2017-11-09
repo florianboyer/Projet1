@@ -1,0 +1,603 @@
+<!DOCTYPE html> 
+<html lang=fr>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="button.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Test Java</title>
+</head>
+
+<body onload="myTimeOut()">
+
+<div class="div1">
+<h1>TEST JAVA SCRIPT</h1>
+</div>
+
+<div class="div2">
+<button name="button" onclick="alert('NE TOUCHE PAS SE BOUTON')">Button test</button><br>
+<p id="demo" style="display: none;"><(°(00)°)></p>
+<button type="button" onclick="document.getElementById('demo').style.display='block'">Qui se cache ici?</button>
+<button type="button" onclick="document.getElementById('demo').style.fontSize='20px'">Nourrit le</button>
+<button type="button" onclick="document.getElementById('demo').style.fontSize='40px'">Encore !?</button>
+
+<p id="para" onclick="mess('ET HOP MAGIE')">Exercice de changement du contenu a l'aide du DOM</p>
+
+<script type="text/javascript">
+	function msg(texte) {
+		document.getElementById("msg").innerHTML = texte;
+	}
+	function mess(txt) {
+document.getElementById("para").innerHTML = txt;
+}
+
+</script>
+<button onclick="msg('------ON------')"> onclick </button>
+<button ondblclick="msg('-----------------------------------DOUBLE CLIK------------------------------------------------')" > ondblclick</button>
+<button	onmousedown="msg('-------------------------------------DOWN-----------------------------------------')"> onmousdown </button>
+<button	onmouseover="msg('-------------------------------------OVER--------------------------------------------')"> onmouseover </button>
+<button	onmouseout="msg('-------------------------------------GO OUT----------------------------------------------')"> onmouseout </button>
+<button	onmouseup="msg('-------------------------------------LEVEL UP------------------------------------------------')"> onmouseup </button>
+</div>
+
+<div class="div3">
+<img src="http://localhost/public_html2/New-World/jardinier-a-larrosoir.jpg" class="image" onclick="alert('Alors vient jardinner avec moi!')" height="400px" width="400px">
+<div class="middle">
+    <div class="text">T'aime jardiner?</div>
+    </div>
+</div>
+
+<div class="div4" id="msg"></div>
+
+<div class="div5">
+	<button type="button" onclick="essai()">Combien y a t-il de bouton?</button>
+	<!--<a href="javascript:mois();">Quel est le mois de ton anniversaire?</a>--><br>
+	<button type="button" onclick="compteur()">Click here!</button>
+
+</div>
+
+<script type="text/javascript">
+function essai(texte) {
+	var parag = document.getElementsByTagName("button");
+	var nb = parag.length;
+
+	alert("Il y a " + nb + " éléments button dans ce document.");
+}
+
+var nbclick=0;
+function compteur() {
+	nbclick ++
+	document.getElementById("click").innerHTML = nbclick;
+}
+
+</script>
+
+
+<div class="div6" id="click">0</div>
+
+<div class="div7">
+<a name="slam">Développement</a><br>
+<a name="sisr">Réseau</a><br>
+<a id="eco">Economie</a><br>
+
+<button onclick="href()">Dev Réseau ou éco?</button><br>
+<p id="affiche"></p>
+</div>
+
+<script>
+function href() {
+	var txte = document.getElementById('eco').innerHTML;
+	document.getElementById('affiche').innerHTML = txte;
+}
+</script>
+
+<div class="div8">
+<ul>
+	<li >SISR</li>
+	<li >SLAM</li>
+</ul>
+<p>Appuyez sur le bouton pour voir un tour de magie</p>
+<button onclick="f()">Try it</button>
+<script>
+function f() {
+	document.getElementsByTagName('li')[0].innerHTML="Tadaaaaaa";	
+}
+</script>
+</div>
+
+<div class="div9">
+  <h2>Dynamic Progress Bar</h2>
+    <div id="myBar" style="height:24px;width:0"></div>
+    <div id="myP"></div>
+  <br>
+  <button onclick="move()">Click Me</button> 
+
+<script>
+function move() {
+  document.getElementById("myP").innerHTML = "Loading";
+  var elem = document.getElementById("myBar");
+  var wait = document.getElementById('myP');  
+  var width = 0;
+  var id = setInterval(frame, 100); 
+  var i = 0;
+   function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      document.getElementById("myP").innerHTML = "Successfully uploaded 100%!";
+      alert("You have been hacked.")
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+      i++;
+      wait.innerHTML += "."
+      if (i > 3) {
+       wait.innerHTML = "Loading";
+       i = 0;
+     }
+      
+    }
+  }
+}
+</script>
+</div>
+
+<div class="div10">
+ <button onclick="topFunction()" id="myBtn" title="Go to top">to top</button>
+ <script type="text/javascript">
+   window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+} 
+ </script>
+ </div> 
+
+
+<div class="div11">
+<h2>Snackbar</h2>
+<button onclick="mySnackbar()">Here!</button>
+
+<div id="snackbar">Wow magic!</div>
+
+<script>
+function mySnackbar() {
+    var x = document.getElementById("snackbar")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+</div>
+
+
+<div class="div12">
+<h2>It's an Accordion</h2>
+ <button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Hé va plutôt voir la section 2 il n'y a rien d'intéressant ici, oust!</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Tu fais quoi là? Dégage d'ici, va voir en section 3 si j'y suis!</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Salutation jeune aventurier, tu t'es perdu ? Il n'y a rien pour toi ici.</p>
+  </div>
+<script type="text/javascript">
+  var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+
+        this.classList.toggle("active");
+
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+} 
+</script>
+</div>
+
+<div class="div13">
+Hover Tooltips
+  <span class="tooltiptext">It's magic!</span>
+</div>
+
+ <div class="div14" onclick="myPopup()">Click Popup
+  <span class="popuptext" id="myPopup">The magic Pop Up</span>
+  <script type="text/javascript">
+// When the user clicks on <div>, open the popup
+function myPopup() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+</script>
+</div> 
+
+<div class="div15">
+<h2>JavaScript Animation</h2>
+
+<button onclick="myMove()">Click for see</button>
+<button id="petit_btn" onclick="myMove(),myMove2()">BATTLE</button>
+<button onclick="myMove2()">Click for see</button>
+
+<div id ="myContainer">
+    <div id ="myAnimation"></div>
+    <div id ="myAnimation2"></div>
+  <script>
+function myMove() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+  var id = setInterval(frame, 1);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+      elem.style.top = "0px";
+      elem.style.left="0px";
+    } else {
+      pos++;
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+function myMove2() {
+  var elem = document.getElementById("myAnimation2");   
+  var pos = 0;
+  var id = setInterval(frame, 14);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+      elem.style.top = "0px";
+      elem.style.right="0px";
+    } else {
+      pos=pos+2;
+      elem.style.top = pos + 'px'; 
+      elem.style.right = pos + 'px'; 
+    }
+  }
+}
+</script>
+</div>
+</div>
+
+ <div class="div16">
+ <h2>Overlay</h2>
+ <button onclick="on()">As-tu peur du noir?</button>
+   <div id="overlay" onclick="off()">
+     <div id="text">Mais qui a éteins la lumière!!</div>
+   </div>
+   <script>
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
+</script>
+ </div> 
+
+ <div class="div17" onclick="myBtnMenu(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+  <script type="text/javascript">
+    function myBtnMenu(x) {
+    x.classList.toggle("change");
+} 
+  </script>
+</div> 
+
+<div class="div18">
+<h2>Alert Messages</h2>
+<button onclick="afficher_danger()" id="btn_danger">Danger</button>
+<button onclick="afficher_success()" id="btn_success">Success</button>
+<button onclick="afficher_info()" id="btn_info">Info</button>
+<button onclick="afficher_warning()" id="btn_warning">Warning</button>
+<div class="alert" id="danger">
+  <span class="closebtn"><i class="fa fa-remove"></i></span>  
+  <strong>Danger!</strong> Indique un danger ou une mauvaise action.
+</div>
+
+<div class="alert" id="success">
+  <span class="closebtn"><i class="fa fa-remove"></i></span>  
+  <strong>Success!</strong> Indique un succée ou une action positive.
+</div>
+
+<div class="alert" id="info">
+  <span class="closebtn"><i class="fa fa-remove"></i></span>  
+  <strong>Info!</strong> Indique une information ou action neutre.
+</div>
+
+<div class="alert" id="warning">
+  <span class="closebtn"><i class="fa fa-remove"></i></span>  
+  <strong>Warning!</strong> Indique de faire attention.
+</div>
+
+
+<script>
+function afficher_danger() {
+   document.getElementById("danger").style.display = "block";
+  //document.getElementById("btn_danger").style.display = "none";
+}
+function afficher_success() {
+    document.getElementById("success").style.display = "block";
+    //document.getElementById("btn_success").style.display = "none";
+
+}
+function afficher_info() {
+    document.getElementById("info").style.display = "block";
+   //document.getElementById("btn_info").style.display = "none";
+}
+function afficher_warning() {
+   document.getElementById("warning").style.display = "block";
+   //document.getElementById("btn_warning").style.display = "none";
+}
+var close = document.getElementsByClassName("closebtn");
+var i;
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function(){ div.style.display = "none";}, 600);
+    }
+};
+</script>
+</div>
+
+<div class="div19">
+
+<div id="loader"></div>
+
+<div style="display:none;" id="txt" class="animate-bottom">
+  <h2>Tada!</h2>
+  <p>La magie d'un chargement terminé!<br>
+  <button id="retry" onclick="retry()">Retry</button>
+</div>
+
+<script>
+var myVar;
+
+function myTimeOut() {
+    myVar = setTimeout(showPage, 5000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("txt").style.display = "block";
+}
+
+function retry() {
+   document.getElementById("loader").style.display = "block";
+  document.getElementById("txt").style.display = "none";
+  clearTimeout(myVar);
+  myVar = setTimeout(showPage, 10000);
+}
+</script>
+</div>
+
+<div class="div20">
+   <!-- Rectangular switch -->
+<label class="switch">
+  <input type="checkbox">
+  <div class="slider"></div>
+</label>
+
+<br>
+<!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox" checked="checked">
+  <div class="slider round"></div>
+</label> 
+</div>
+
+<div class="div21" id="mySidenav" class="sidenav">
+  <a href="#" id="about">About</a>
+  <a href="#" id="blog">Blog</a>
+  <a href="#" id="projects">Projects</a>
+  <a href="#" id="contact">Contact</a>
+</div>
+
+<div class="div22">
+<h2>Modal Login</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar" height="500px">
+    </div>
+
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <input type="checkbox" checked="checked"> Remember me
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+  <script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div>
+
+<div class="div23">
+<h2>What's ur favorite color?</h2>
+
+ <div id="Red" class="tabcontent">
+  <h3>Red</h3>
+  <p>Red is blood's color</p>
+</div>
+
+<div id="Green" class="tabcontent">
+  <h3>Green</h3>
+  <p>Green is natural's color</p>
+</div>
+
+<div id="Blue" class="tabcontent">
+  <h3>Blue</h3>
+  <p>Blue is sky's color</p>
+</div>
+
+<div id="Orange" class="tabcontent">
+  <h3>Orange</h3>
+  <p>Orange is a fruit</p>
+</div>
+<button class="tablink" onclick="openCase('Red', this, 'red')">Red</button>
+<button class="tablink" onclick="openCase('Green', this, 'green')">Green</button>
+<button class="tablink" onclick="openCase('Blue', this, 'blue')">Blue</button>
+<button class="tablink" onclick="openCase('Orange', this, 'orange')" id="defaultOpen">Orange</button> 
+
+<script type="text/javascript">
+  function openCase(caseName, elmnt, color) {
+    // Hide all elements with class="tabcontent" by default */
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+
+    }
+
+    // Remove the background color of all tablinks/buttons
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) { 
+      tablinks[i].style.colorolor = "white";
+        tablinks[i].style.backgroundColor = "";
+    }
+
+    // Show the specific tab content
+    document.getElementById(caseName).style.display = "block";
+
+    // Add the specific color to the button used to open the tab content
+    elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click(); 
+</script>
+</div>
+
+<div class="div24">
+<div id="charging" class="fa"></div>
+<script>
+function chargebattery() {
+  var charge;
+  charge = document.getElementById("charging");
+  charge.innerHTML = "&#xf244;";
+   charge.style.color = "red";
+  setTimeout(function () {
+    charge.innerHTML = "&#xf243;";
+    charge.style.color = "red";
+  }, 1000);
+  setTimeout(function () {
+    charge.innerHTML = "&#xf242;";
+     charge.style.color = "black";
+  }, 2000);
+  setTimeout(function () {
+    charge.innerHTML = "&#xf241;";
+     charge.style.color = "green";
+  }, 3000);
+  setTimeout(function () {
+    charge.innerHTML = "&#xf240;";
+     charge.style.color = "green";
+  }, 4000);
+}
+chargebattery();
+setInterval(chargebattery, 5000);
+</script> 
+</div>
+
+<div class="div25">
+
+<p>My birthday is in :<br>
+<span id="timeout"></span></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Feb 18, 2018 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("timeout").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timeout").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+</div>
+
+<div class="div26">
+<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+<script>
+function myFunction(x) {
+    x.classList.toggle("fa-thumbs-down");
+}
+</script>
+</div>
+
+<div class="div27">
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
+
+</body>
+</html>
