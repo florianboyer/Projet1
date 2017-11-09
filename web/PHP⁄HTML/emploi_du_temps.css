@@ -1,0 +1,86 @@
+table{
+	border: 1px solid black;
+	margin: auto;
+}
+
+.mixH{
+	width:0px; height:50px;
+	background: #757171;
+	color: white;
+	text-align: center;
+	border: 1px solid black;
+}
+.mixH:hover
+{
+    color : black;
+    background: #FFF;
+}
+
+
+
+.mixJ{
+	width:300px; height:50px;
+	background: #757171;
+	color: white;
+	text-align: center;
+	border: 1px solid black;
+}
+.mixJ:hover
+{
+    color : black;
+    background: #FFF;
+}
+
+
+
+.mixG{
+	width:150px; height:25px;
+	background: #757171;
+	color: white;
+	text-align: center;
+	border: 1px solid black;
+}
+.mixG:hover
+{
+    color : black;
+    background: #FFF;
+}
+
+
+
+.mixInfo{
+	background: #392975;
+	color: black;
+	text-align: center;
+	border: 1px solid black;
+}
+.mixInfo:hover
+{
+    color : black;
+    background: #00E9FF;
+}
+
+
+
+.mixReste{
+	background: #29752B;
+	color: black;
+	text-align: center;
+	border: 1px solid black;
+}
+.mixReste:hover
+{
+    color : black;
+    background: #0FFC22;
+}
+
+
+
+.mixTrou{
+	background: #FFF;
+	border-collapse: collapse; 
+}
+.mixTrou:hover
+{
+    background: grey;
+}

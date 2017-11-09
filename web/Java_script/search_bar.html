@@ -1,0 +1,198 @@
+<!DOCTYPE html> 
+<html lang=fr>
+<head>
+<meta charset="utf-8">
+<title>Barre de recherche</title>
+<style type="text/css">
+
+input[type=text] {
+    width: 150px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 96%;
+}
+
+#myInput {
+    background-position: 10px 12px; 
+    background-repeat: no-repeat; 
+    //width: 96%; 
+    font-size: 16px; 
+    padding: 12px 20px 12px 40px; 
+    border: 1px solid #ddd; 
+    margin-bottom: 12px; 
+}
+
+#myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a {
+    border: 1px solid #ddd; 
+    margin-top: -1px; 
+    background-color: #f6f6f6;
+    padding: 12px; 
+    text-decoration: none; 
+    font-size: 18px; 
+    color: black; 
+    display: block;
+}
+
+#myUL li a.header {
+    background-color: #e2e2e2;     cursor: default; 
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee;
+}
+</style>
+</head>
+<body>
+ <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+<ul id="myUL">
+  <li><a href="#" class="header">A</a></li>
+  <li><a href="#">Adele</a></li>
+  <li><a href="#">Agnes</a></li>
+
+  <li><a href="#" class="header">B</a></li>
+  <li><a href="#">Billy</a></li>
+  <li><a href="#">Bob</a></li>
+
+  <li><a href="#" class="header">C</a></li>
+  <li><a href="#">Calvin</a></li>
+  <li><a href="#">Christina</a></li>
+  <li><a href="#">Cindy</a></li>
+
+   <li><a href="#" class="header">D</a></li>
+  <li><a href="#">David</a></li>
+  <li><a href="#">Didier</a></li>
+  <li><a href="#">Dominique</a></li>
+
+   <li><a href="#" class="header">E</a></li>
+  <li><a href="#">Eliot</a></li>
+  <li><a href="#">Erwan</a></li>
+  <li><a href="#">Estelle</a></li>
+
+   <li><a href="#" class="header">F</a></li>
+  <li><a href="#">Fabrice</a></li>
+  <li><a href="#">Floriane</a></li>
+  <li><a href="#">Francis</a></li>
+
+   <li><a href="#" class="header">G</a></li>
+  <li><a href="#">Galio</a></li>
+  <li><a href="#">Gerard</a></li>
+  <li><a href="#">Geromine</a></li>
+
+   <li><a href="#" class="header">H</a></li>
+  <li><a href="#">Hector</a></li>
+  <li><a href="#">Henri</a></li>
+  <li><a href="#">Herver</a></li>
+
+   <li><a href="#" class="header">I</a></li>
+  <li><a href="#">Iris</a></li>
+  <li><a href="#">Ilona</a></li>
+  <li><a href="#">Ilian</a></li>
+
+   <li><a href="#" class="header">J</a></li>
+   <li><a href="#">Jean-Michel</a></li>
+   <li><a href="#">Julien</a></li>
+  <li><a href="#">Justine</a></li>
+ 
+  <li><a href="#" class="header">K</a></li>
+  <li><a href="#">Kahila</a></li>
+  <li><a href="#">Kevin</a></li>
+  <li><a href="#">Killian</a></li>
+
+   <li><a href="#" class="header">L</a></li>
+  <li><a href="#">Léo</a></li>
+  <li><a href="#">Lison</a></li>
+  <li><a href="#">Lola</a></li>
+
+   <li><a href="#" class="header">M</a></li>
+  <li><a href="#">Marion</a></li>
+  <li><a href="#">Megane</a></li>
+  <li><a href="#">Michel</a></li>
+
+   <li><a href="#" class="header">N</a></li>
+  <li><a href="#">Naomie</a></li>
+  <li><a href="#">Nino</a></li>
+  <li><a href="#">Noémie</a></li>
+
+   <li><a href="#" class="header">O</a></li>
+  <li><a href="#">Olivier</a></li>
+  <li><a href="#">Ophelia</a></li>
+  <li><a href="#">Oria</a></li>
+
+   <li><a href="#" class="header">P</a></li>
+  <li><a href="#">Patric</a></li>
+  <li><a href="#">Pascaline</a></li>
+  <li><a href="#">Peterson</a></li>
+
+   <li><a href="#" class="header">Q</a></li>
+  <li><a href="#">Queen</a></li>
+  <li><a href="#">Quentin</a></li>
+
+ <li><a href="#" class="header">R</a></li>
+  <li><a href="#">Rayan</a></li>
+  <li><a href="#">Rémy</a></li>
+  <li><a href="#">Rosalie</a></li>
+
+   <li><a href="#" class="header">S</a></li>
+  <li><a href="#">Satan</a></li>
+  <li><a href="#">Sofiane</a></li>
+  <li><a href="#">Sou</a></li>
+
+   <li><a href="#" class="header">T</a></li>
+  <li><a href="#">Tabata</a></li>
+  <li><a href="#">Tao</a></li>
+  <li><a href="#">Thierry</a></li>
+
+   <li><a href="#" class="header">U</a></li>
+  <li><a href="#">Ulysse</a></li>
+  <li><a href="#">Ursula</a></li>
+
+   <li><a href="#" class="header">V</a></li>
+  <li><a href="#">Vincent</a></li>
+  <li><a href="#">Victor</a></li>
+  <li><a href="#">Valérie</a></li>
+
+   <li><a href="#" class="header">W</a></li>
+	<li><a href="#">Wallid</a></li> 
+	<li><a href="#">Wendy</a></li> 
+ 	<li><a href="#">William</a></li>
+
+ 	 <li><a href="#" class="header">X</a></li>
+  <li><a href="#">Xavier</a></li>
+  <li><a href="#">Xahya</a></li>
+ 
+  <li><a href="#" class="header">Z</a></li>
+  <li><a href="#">Zakari</a></li>
+  <li><a href="#">Zoé</a></li>
+  <li><a href="#">Zed</a></li>
+</ul> 
+
+<script type="text/javascript">
+function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>

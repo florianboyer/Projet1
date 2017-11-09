@@ -1,0 +1,30 @@
+h1 {
+	text-decoration: underline overline;
+	text-align: center;
+}
+
+.form {
+	text-align: center;
+	width: 500px;
+	border-style: double;
+	position: relative;
+	left : 700px; 
+    
+}
+
+.req {
+	position: relative;
+	border-style: solid;
+	text-align: center;
+	width: 300px;
+	left: 810px;
+}
+
+input , button { 
+ 	position: static ;
+    background: linear-gradient(to top right, #7C7C7C, black );
+    color: white;
+    border-radius: 20px;
+    -moz-appearance: none;
+    text-align: center;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html lang=fr>
+<head>
+<meta charset="utf-8">
+<title>Caisse</title>
+</head>
+<body>
+	<form action="caisse_cafet.php" method="get">
+    <!-- <fieldset><legend>  Saisir :</legend>
+         <label for="qte"> Borne 1 : </label>
+	     <input type="number" name="b1" min="0" max=""><br>
+	     <label for="qte"> Borne 2 : </label>
+         <input type="number" name="b2" min="0" max=""><br>
+         <input type="submit" value="Validation"><br>
+     </fieldset> -->
+
+	<fieldset>
+	<strong>Option repas :</strong>  <br />
+     <input type="checkbox" name="Entrée"/><label for="Entrée"> Entrée </label><br />
+     <input type="checkbox" name="Légumes"/><label for="Légumes"> Légumes </label><br />
+     <input type="checkbox" name="Poisson"/><label for="Poisson"> Poisson </label><br />
+     <input type="checkbox" name="Viande"/><label for="Viande"> Viande </label><br />
+     <input type="checkbox" name="Dessert"/><label for="Dessert"> Dessert </label><br><br>
+     
+	<strong>Choix de la commande:</strong> <br />
+	<input type="radio" name="tva"><label for="tva"> Surplace</label>
+	<input type="radio" name="tva"><label for="tva"> Emporter</label><br><br>
+
+	<label for="boisson"><strong>Supplément boisson :</strong></label><br />
+        <select name="boisson" id="boisson">
+        <option value='nothing'> Aucune </option>
+            <optgroup label="soda">
+                <option value="coca"> Coca-Cola </option>
+                 <option value="oasis"> Oasis </option>
+                <option value="orangina" > Orangina </option>
+                <option value="sprite"> Sprite </option></option>
+                <option value="ice-tea" > Ice Tea </option>
+            </optgroup>
+            <optgroup label="Alcool">
+            	<option value="vin"> Vin </option>
+            	<option value="rose"> Rosé </option>
+            	<option value="biere"> Bière </option>
+            	<option value="champagne"> Champagne </option>
+           </optgroup>
+            <optgroup label="Autres">
+                <option value="thé" > Thé </option>
+                <option value="café" > Café </option>
+                <option value="milkshake"> Milkshake </option>
+                <option value="frappé" > Frappé </option>
+            </optgroup>
+          </fieldset>
+ 
+      <input type="submit" value="validation">
+<script type="text/javascript">
+if isset($_REQUEST['validation']) 
+{
+    
+}       
+</script>
+	    
+     </form>
+</body>
+</html>
