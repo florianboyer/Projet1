@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta charset="utf-8">
+  <title>person.cpp</title>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<pre>
+<font color="0000ff"><strong>#include <font color="#008000">&quot;person.h&quot;</font> <font color="#444444">// Relier la class Person externe à ce fichier (entre &quot;&quot; pour les fichier écrit par moi-même)</font></strong></font>
+<font color="#444444">// Codage des méthode présent dans la Class</font>
+<font color="#2040a0">string</font> <font color="#2040a0">Person</font><font color="4444FF">:</font><font color="4444FF">:</font><font color="#2040a0">getName</font><font color="4444FF">(</font><font color="4444FF">)</font>
+<font color="4444FF"><strong>{</strong></font>
+	<strong>return</strong> <font color="#2040a0">name</font><font color="4444FF">;</font>
+<font color="4444FF"><strong>}</strong></font>
+
+<font color="#2040a0">string</font> <font color="#2040a0">Person</font><font color="4444FF">:</font><font color="4444FF">:</font><font color="#2040a0">getSurname</font><font color="4444FF">(</font><font color="4444FF">)</font>
+<font color="4444FF"><strong>{</strong></font>
+	<strong>return</strong> <font color="#2040a0">name</font><font color="4444FF">;</font>
+<font color="4444FF"><strong>}</strong></font>
+
+<strong>int</strong> <font color="#2040a0">Person</font><font color="4444FF">:</font><font color="4444FF">:</font><font color="#2040a0">getOld</font><font color="4444FF">(</font><font color="4444FF">)</font>
+<font color="4444FF"><strong>{</strong></font>
+	<strong>return</strong> <font color="#2040a0">old</font><font color="4444FF">;</font>
+<font color="4444FF"><strong>}</strong></font>
+
+<strong>void</strong> <font color="#2040a0">Person</font><font color="4444FF">:</font><font color="4444FF">:</font><font color="#2040a0">setName</font><font color="4444FF">(</font><font color="#2040a0">string</font> <font color="#2040a0">thisName</font><font color="4444FF">)</font>
+<font color="4444FF"><strong>{</strong></font>
+	<font color="#2040a0">name</font> <font color="4444FF">=</font> <font color="#2040a0">thisName</font><font color="4444FF">;</font>
+<font color="4444FF"><strong>}</strong></font>
+
+<strong>void</strong> <font color="#2040a0">Person</font><font color="4444FF">:</font><font color="4444FF">:</font><font color="#2040a0">setSurname</font><font color="4444FF">(</font><font color="#2040a0">string</font> <font color="#2040a0">thisSurname</font><font color="4444FF">)</font>
+<font color="4444FF"><strong>{</strong></font>
+	<font color="#2040a0">name</font> <font color="4444FF">=</font> <font color="#2040a0">thisSurname</font><font color="4444FF">;</font>
+<font color="4444FF"><strong>}</strong></font>
+
+<strong>void</strong> <font color="#2040a0">Person</font><font color="4444FF">:</font><font color="4444FF">:</font><font color="#2040a0">setOld</font><font color="4444FF">(</font><strong>int</strong> <font color="#2040a0">thisOld</font><font color="4444FF">)</font>
+<font color="4444FF"><strong>{</strong></font>
+	<font color="#2040a0">name</font> <font color="4444FF">=</font> <font color="#2040a0">thisOld</font><font color="4444FF">;</font>
+<font color="4444FF"><strong>}</strong></font>
+
+<strong>void</strong> <font color="#2040a0">Person</font><font color="4444FF">:</font><font color="4444FF">:</font><font color="#2040a0">display</font><font color="4444FF">(</font><font color="4444FF">)</font>
+<font color="4444FF"><strong>{</strong></font>
+	<font color="#2040a0">cout</font> <font color="4444FF">&lt;</font><font color="4444FF">&lt;</font> <font color="#008000">&quot;Vous êtes Mr/Mme &quot;</font> <font color="4444FF">&lt;</font><font color="4444FF">&lt;</font> <font color="#2040a0">name</font> <font color="4444FF">&lt;</font><font color="4444FF">&lt;</font> <font color="#008000">&quot; &quot;</font><font color="4444FF">;</font>
+	<font color="#2040a0">cout</font> <font color="4444FF">&lt;</font><font color="4444FF">&lt;</font> <font color="#2040a0">surname</font> <font color="4444FF">&lt;</font><font color="4444FF">&lt;</font> <font color="#008000">&quot;, <font color="#77dd77">\n</font>&quot;</font> <font color="4444FF">;</font>
+	<font color="#2040a0">cout</font> <font color="4444FF">&lt;</font><font color="4444FF">&lt;</font> <font color="#008000">&quot;agé(e) de &quot;</font><font color="4444FF">&lt;</font><font color="4444FF">&lt;</font> <font color="#2040a0">old</font> <font color="4444FF">&lt;</font><font color="4444FF">&lt;</font> <font color="#008000">&quot;ans. <font color="#77dd77">\n</font><font color="#77dd77">\n</font>Je vous souhaites la bienvenue.<font color="#77dd77">\n</font><font color="#77dd77">\n</font>&quot;</font><font color="4444FF">;</font>
+<font color="4444FF"><strong>}</strong></font>
+
+<strong>void</strong> <font color="#2040a0">Person</font><font color="4444FF">:</font><font color="4444FF">:</font><font color="#2040a0">input</font><font color="4444FF">(</font><font color="4444FF">)</font>
+<font color="4444FF"><strong>{</strong></font> 	
+	<font color="#2040a0">cout</font> <font color="4444FF">&lt;</font><font color="4444FF">&lt;</font> <font color="#008000">&quot;<font color="#77dd77">\n</font>Saisir votre nom : &quot;</font> <font color="4444FF">;</font>
+	<font color="#2040a0">getline</font><font color="4444FF">(</font><font color="#2040a0">cin</font>,<font color="#2040a0">name</font><font color="4444FF">)</font><font color="4444FF">;</font> <font color="#444444">//getline pour les strings</font>
+	<font color="#2040a0">cout</font> <font color="4444FF">&lt;</font><font color="4444FF">&lt;</font> <font color="#008000">&quot;Saisir votre prénom : &quot;</font><font color="4444FF">;</font>
+	<font color="#2040a0">getline</font><font color="4444FF">(</font><font color="#2040a0">cin</font>,<font color="#2040a0">surname</font><font color="4444FF">)</font><font color="4444FF">;</font> <font color="#444444">//getline pour les strings</font>
+	<font color="#2040a0">cout</font> <font color="4444FF">&lt;</font><font color="4444FF">&lt;</font> <font color="#008000">&quot;Saisir votre âge : &quot;</font><font color="4444FF">;</font>
+	<font color="#2040a0">cin</font> <font color="4444FF">&gt;</font><font color="4444FF">&gt;</font> <font color="#2040a0">old</font><font color="4444FF">;</font>
+	<font color="#2040a0">cout</font> <font color="4444FF">&lt;</font><font color="4444FF">&lt;</font> <font color="#008000">&quot;<font color="#77dd77">\n</font><font color="#77dd77">\n</font>&quot;</font><font color="4444FF">;</font>
+<font color="4444FF"><strong>}</strong></font>
+
+</pre>
+<hr>
+syntax highlighted by <a href="http://www.palfrader.org/code2html">Code2HTML</a>, v. 0.9.1
+</body>
+</html>
